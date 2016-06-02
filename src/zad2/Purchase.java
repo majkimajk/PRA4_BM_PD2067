@@ -17,6 +17,11 @@ public class Purchase implements Serializable{
     private PropertyChangeSupport changeSup = new PropertyChangeSupport(this);
     private VetoableChangeSupport vetoSup = new VetoableChangeSupport(this);
 
+    public Purchase(String prod, String data, double price) {
+        this.prod = prod;
+        this.data = data;
+        this.price = price;
+    }
 
     //setter i getter dla prod
     public void setProd(String newProd) {
@@ -77,4 +82,12 @@ public class Purchase implements Serializable{
         vetoSup.removeVetoableChangeListener(vetoListener);
     }
 
-}  
+    @Override
+    public String toString() {
+        return "Purchase{" +
+                "prod='" + prod + '\'' +
+                ", data='" + data + '\'' +
+                ", price=" + price +
+                '}';
+    }
+}

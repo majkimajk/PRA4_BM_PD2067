@@ -7,6 +7,8 @@
 package zad2;
 
 
+import java.beans.PropertyVetoException;
+
 public class Main {
   public static void main(String[] args) {
 
