@@ -84,10 +84,10 @@ public class Purchase implements Serializable{
 
     @Override
     public String toString() {
-        return "Purchase{" +
-                "prod='" + prod + '\'' +
-                ", data='" + data + '\'' +
+        return "Purchase[" +
+                "prod=" + prod +
+                ", data=" + data  +
                 ", price=" + price +
-                '}';
+                ']';
     }
 }

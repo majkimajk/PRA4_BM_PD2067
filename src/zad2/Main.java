@@ -7,6 +7,10 @@
 package zad2;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.beans.PropertyVetoException;
 
 public class Main {
@@ -15,9 +19,10 @@ public class Main {
     Purchase purch = new Purchase("komputer", "nie ma promocji", 3000.00);
     System.out.println(purch);
 
-    // --- tu należy dodać odpowiedni kod
+    PurchasePropertyListener ppl = new PurchasePropertyListener();
+    purch.addPropertyChangeListener(ppl);
+    purch.addVetoableChangeListener(ppl);
 
-    // ----------------------------------
 
     try {
       purch.setData("w promocji");
@@ -32,4 +37,7 @@ public class Main {
     System.out.println(purch);
 
   }
+
+
+
 }
