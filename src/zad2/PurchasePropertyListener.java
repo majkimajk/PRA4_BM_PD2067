@@ -20,7 +20,7 @@ public class PurchasePropertyListener implements PropertyChangeListener, Vetoabl
     public void vetoableChange(PropertyChangeEvent evt) throws PropertyVetoException {
         Double oldPrice = (Double) evt.getOldValue();
         Double newPrice = (Double) evt.getNewValue();
-        if (newPrice <= 500.0) {
+        if (newPrice <= 1000.0) {
             throw new PropertyVetoException("Price change to: " + newPrice + " not allowed", evt);
         }
         else {

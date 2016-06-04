@@ -28,8 +28,8 @@ public class Main {
       purch.setData("w promocji");
       purch.setPrice(2000.00);
       System.out.println(purch);
-
       purch.setPrice(500.00);
+
 
     } catch (PropertyVetoException exc) {
       System.out.println(exc.getMessage());
